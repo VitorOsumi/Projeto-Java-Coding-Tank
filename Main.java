@@ -4,7 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner conversor = new Scanner(System.in);
 
-        System.out.println("Quantas temperaturas deseja converter?");
+        try {
+
+        System.out.println("Quantas temperaturas deseja converter? (Insira um número inteiro)");
         int numeroTemperaturas = conversor.nextInt();
 
         System.out.println("Digite qual temperatura de origem (1. Celsius 2. Kelvin 3. Fahrenheit)");
@@ -30,6 +32,8 @@ public class Main {
         }
 
         Double[] temperaturasOutput = new Double[100];
+
+        // Fórmulas utilizadas do Google //
 
         if (origem == 1 && destino == 2) {
             for (int j = 0; j < numeroTemperaturas; j++) {
@@ -78,8 +82,16 @@ public class Main {
 
         System.out.println("Temperatura na escala " + origemNome + ", transformada em escala " + destinoNome + ". Eis os resultados de valor inserido e valor convertido:");
         for (int i = 0; i < numeroTemperaturas; i++) {
-            System.out.println("Temperatura inicial: " + temperaturasInput[i] + " - Temperatura final: " + temperaturasOutput[i]);
+            System.out.println("Temperatura inicial: " + temperaturasInput[i] + " - Temperatura final: " + temperaturasOutput[i] + " --- Média das temperaturas iniciais e transformadas: " + (temperaturasInput[i]+temperaturasOutput[i])/2);
         }
         System.out.println("Finalizando o programa...");
+
+        } catch (Exception e){
+            System.out.println("Algo de errado não está certo!");
+        }
+        finally {
+            System.out.println("Finalizando o programa, favor tentar novamente!");
+        }
+
     }
 }
