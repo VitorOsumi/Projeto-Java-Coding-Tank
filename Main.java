@@ -84,13 +84,12 @@ public class Main {
         for (int i = 0; i < numeroTemperaturas; i++) {
             System.out.println("Temperatura inicial: " + temperaturasInput[i] + " - Temperatura final: " + temperaturasOutput[i] + " --- Média das temperaturas iniciais e transformadas: " + (temperaturasInput[i]+temperaturasOutput[i])/2);
         }
-        System.out.println("Finalizando o programa...");
 
         } catch (Exception e){
-            System.out.println("Algo de errado não está certo!");
+            System.out.println("Algo de errado não está certo! Tentar novamente!");
         }
         finally {
-            System.out.println("Finalizando o programa, favor tentar novamente!");
+            System.out.println("Finalizando o programa...");
         }
 
     }
